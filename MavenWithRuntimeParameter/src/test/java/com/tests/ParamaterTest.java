@@ -17,8 +17,7 @@ public class ParamaterTest
 	WebDriver driver;
 	String filePath = "C:/Users/HK-SONY/Selenium_Eclipse_Workspace/MavenWithRuntimeParameter/src/test/java/config/config.properties";
 	String browserName;
-	
-	
+
 	/*@BeforeTest(enabled=false)
 	public void readProperties() throws Exception
 	{
@@ -30,7 +29,7 @@ public class ParamaterTest
 	}
 	*/
 	
-	
+	//NOTE: This browser parameter will taken from Maven at run time from user
 	@Parameters("browser")
 	@BeforeClass	
 	public void setUp(String browserName)
