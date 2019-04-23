@@ -19,7 +19,7 @@ public class ParamaterTest
 	String browserName;
 	
 	
-	@BeforeTest(enabled=false)
+	/*@BeforeTest(enabled=false)
 	public void readProperties() throws Exception
 	{
 		File file = new File(filePath);
@@ -28,7 +28,7 @@ public class ParamaterTest
 		prop.load(fis);
 		browserName = prop.getProperty("browser");
 	}
-	
+	*/
 	
 	
 	@Parameters("browser")
