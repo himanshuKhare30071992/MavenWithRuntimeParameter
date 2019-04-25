@@ -30,9 +30,9 @@ public class ParamaterTest
 	*/
 	
 	//NOTE: This browser parameter will taken from Maven at run time from user
-	@Parameters("browser")
+	@Parameters({"browser", "application"})
 	@BeforeClass	
-	public void setUp(String browserName)
+	public void setUp(String browserName, String applicationUrl)
 	{
 		if(browserName.equalsIgnoreCase("chrome"))
 		{
@@ -44,6 +44,7 @@ public class ParamaterTest
 			driver = new FirefoxDriver();
 		}
 		
+		driver.get(applicationUrl);
 		driver.quit();
 	}
 	
@@ -51,12 +52,12 @@ public class ParamaterTest
 	@Test
 	public void Test1()
 	{
-		System.out.println("===Maven Parameter Test Called====");
-		System.out.println("===Maven Parameter Test Called====");
-		System.out.println("===Maven Parameter Test Called====");
-		System.out.println("===Maven Parameter Test Called====");
-		System.out.println("===Maven Parameter Test Called====");
-		System.out.println("===Maven Parameter Test Called====");
+		for (int i = 0; i < 10; i++)
+		{
+			System.out.println(i+") === Maven Parameter Test Called ====");
+		}
+		
+		
 	}
 	
 	
